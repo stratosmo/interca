@@ -1,0 +1,36 @@
+---
+title: "report"
+author: "interca"
+date: "`r Sys.Date()`"
+output: html_document
+params:
+  plane: NA
+  plane_table: NA
+---
+
+InterCA dynamic report
+
+Please find below an automatic report that has been produced according to your selections. Please notice that this report has been developed to facilitate faster interpretation of interpretive axes and interpretive planes as suggested at : ["Automatic" interpretation of multiple correspondence analysis (MCA) results for nonexpert users, using R programming \| Emerald Insight](https://www.emerald.com/insight/content/doi/10.1108/ACI-07-2022-0191/full/html)
+
+Cite:
+
+Moschidis, S., Markos, A., & Thanopoulos, A. C. (2022). "Automatic" interpretation of multiple correspondence analysis (MCA) results for nonexpert users, using R programming. Applied Computing and Informatics, ahead-of-print(ahead-of-print). <https://doi.org/10.1108/ACI-07-2022-0191>
+
+According to your selections the following table is produced
+
+```{r echo=FALSE}
+library(pander)
+params$plane
+```
+
+According to your selection the following table is produced
+```{r echo=FALSE, render=pander::pander}
+library(pander)
+first<-params$plane_table[1]
+second<-params$plane_table[2]
+combined=data.frame(xaxis=first,yaxis=second)
+colnames(combined)=c("x_axis interpretive coordinates","y_axis interpretive coordinates")
+combined
+```
+
+
