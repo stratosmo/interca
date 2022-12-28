@@ -20,4 +20,5 @@ import(writexl)
 import(readr)
 import(openxlsx)
 exportPattern("^[[:alpha:]]+")
+export(shinyApp)
 
