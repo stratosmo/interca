@@ -11,5 +11,5 @@
 # #shinyApp(ui = system.file("R", "ui.R", package = "test"),
 #        #  server = system.file("R", "server.R", package = "test"))
 
-shiny::runApp()
+shiny::runApp("/R")
 
