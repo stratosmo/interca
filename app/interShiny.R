@@ -12,13 +12,6 @@
 #        #  server = system.file("R", "server.R", package = "test"))
 
 #shiny::runApp("R")
-
-  interShiny= function(...) {
-    appDir = system.file("app", package = "test")
-    if (appDir == "") {
-      stop("Could not find example directory. Try re-installing `shinyMlr`.", call. = FALSE)
-    }
-
-    shiny::runApp(appDir, display.mode = "normal")
-  }
-
+interShiny <- function() {
+  shiny::runApp("R")
+}
