@@ -14,7 +14,7 @@
 #shiny::runApp("R")
 
   interShiny= function(...) {
-    appDir = system.file("app", package = "test")
+    appDir = system.file("interShiny", package = "test")
     if (appDir == "") {
       stop("Could not find example directory. Try re-installing `shinyMlr`.", call. = FALSE)
     }
