@@ -7,16 +7,11 @@
 #   # Set the working directory.
 #  #setwd(cur_dir2)
 #   #source('app/server.R')
-#   shiny::runApp()
+#
 # #shinyApp(ui = system.file("R", "ui.R", package = "test"),
 #        #  server = system.file("R", "server.R", package = "test"))
 
   interShiny = function(...) {
-    appDir = system.file( package = "test")
-    if (appDir == "") {
-      stop("Could not find example directory. Try re-installing `shinyMlr`.", call. = FALSE)
-    }
-
-    shiny::runApp(appDir, display.mode = "normal")
+    shiny::runApp()
   }
 
