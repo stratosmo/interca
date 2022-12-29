@@ -11,5 +11,7 @@
 # #shinyApp(ui = system.file("R", "ui.R", package = "test"),
 #        #  server = system.file("R", "server.R", package = "test"))
 
-shiny::runApp("/R")
-
+#shiny::runApp("R")
+interShiny <- function() {
+  shiny::runApp("R")
+}
