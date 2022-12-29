@@ -7,7 +7,7 @@ interShiny<-function(){
   # Set the working directory.
  #setwd(cur_dir2)
   #source('app/server.R')
-  shiny::runApp("R")
+  shiny::runApp()
 #shinyApp(ui = system.file("R", "ui.R", package = "test"),
        #  server = system.file("R", "server.R", package = "test"))
 }
