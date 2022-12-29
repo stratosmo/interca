@@ -12,7 +12,7 @@
 #        #  server = system.file("R", "server.R", package = "test"))
 
   interShiny = function(...) {
-    appDir = system.file("test", package = "test")
+    appDir = system.file( package = "test")
     if (appDir == "") {
       stop("Could not find example directory. Try re-installing `shinyMlr`.", call. = FALSE)
     }
