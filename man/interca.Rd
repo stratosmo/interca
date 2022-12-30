@@ -31,7 +31,7 @@ The number of categorical variables that will be retained for the calculation of
 %% ...
 }
 \references{
-%% ~put references to the literature/web site here ~
+Moschidis, S., Markos, A., & Thanopoulos, A. C. (2022). “Automatic” interpretation of multiple correspondence analysis (MCA) results for nonexpert users, using R programming. Applied Computing and Informatics, (ahead-of-print).
 }
 \author{
 %%  ~~who you are~~
@@ -47,7 +47,7 @@ The number of categorical variables that will be retained for the calculation of
 }
 \examples{
 
-For example, we will use the wg93 data set that is available in the package ca των Nenadic, O., & Greenacre, M. (2007). Correspondence analysis in R, with two-and three-dimensional graphics: the ca package. Journal of statistical software, 20, 1-13.
+#For example, we will use the wg93 data set that is available in the #package ca των Nenadic, O., & Greenacre, M. (2007). Correspondence #analysis in R, with two-and three-dimensional graphics: the ca package. #Journal of statistical software, 20, 1-13.
 
 library(ca)
 data<-ca::wg93

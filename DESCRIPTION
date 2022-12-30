@@ -1,14 +1,17 @@
-Package: test
+Package: interCa
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Automatic interpretation of the results of the multiple correspondence analysis method.
 Version: 0.1.0
 Depends: tidyverse,ggrepel,ggplot2,FactoMineR,ca,plotly,this.path,egg,soc.ca,factoextra,CAinterprTools,DT,shiny,readxl,pander,shinyFeedback,waiter,shinyWidgets, writexl,readr,openxlsx 
 Imports: tidyverse,ggrepel,ggplot2,FactoMineR,ca,plotly,this.path,egg,soc.ca,factoextra,CAinterprTools,DT,shiny,readxl,pander,shinyFeedback,waiter,shinyWidgets, writexl,readr,openxlsx 
 Author: S.Moschidis, A.Markos
-Maintainer: Stratos Moschidisr <smos@uom.edu.gr>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
-License: What license is it under?
+Maintainer: Stratos Moschidis <smos@uom.edu.gr>
+Description: Το πακέτο περιλαμβάνει ένα πλήθος συναρτήσεων που υπολογίζουν
+    τις ερμηνευτικές συντεταγμένες, εκτυπώνουν ερμηνευτικούς άξονες και ερμηνευτικά επίπεδα
+    καθώς και μία εφαρμογή shiny με την οποία ο χρήστης με την βοήθεια γραφικού
+    περιβάλλοντος μπορεί να εκτελέσει τα παραπάνω και να κατεβάσει αντίστοιχα γραφήματα, πίνακες
+    και έτοιμες αναφορές.
+License: GPL-3
 Encoding: UTF-8
 LazyData: true
 
