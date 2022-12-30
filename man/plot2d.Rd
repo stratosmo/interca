@@ -1,22 +1,25 @@
-\name{plot1d}
-\alias{plot1d}
+\name{plot2d}
+\alias{plot2d}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Interpretive axis
+Interpretive plane
 }
 \description{
-The function takes the result of the interca() function and the number of a factorial axis and returns the corresponding interpretive axis with the most significant points.
+The function takes as parameters the result of the interca() function, the interpretive axis that will form the x axis, and the interpretive axis that will form the y axis. The function returns the interpretive plane formed by the above.
 }
 \usage{
-plot1d(res, dim = 1)
+plot2d(res, dim1 = 1, dim2 = 2)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{res}{
-The result of the execution of the interca() function.
+The result of the interca() function.
 }
-  \item{dim}{
-The number of the interpretive axis to be printed.
+  \item{dim1}{
+The number of the interpretive axis that will form the x axis of the interpretive plane.
+}
+  \item{dim2}{
+The number of the interpretive axis that will form the y axis of the interpretive plane.
 }
 }
 \details{
@@ -42,17 +45,15 @@ The interca() function must be executed first in order to use the function.
 %% ~Make other sections like Warning with \section{Warning }{....} ~
 
 \seealso{
-interCa
+%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-
 #For the example, we will use the wg93 data frame from the ca package.
 library(ca)
 library(interCa)
 data<-ca::wg93
 res<-interca(data,5)
-plot1d(res,1)
-
+plot2d(res,1,2)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory (show via RShowDoc("KEYWORDS")):
