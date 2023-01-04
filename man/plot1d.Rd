@@ -46,7 +46,8 @@ interCa
 }
 \examples{
 
-#For the example, we will use the wg93 data frame from the ca package.
+#For example, we will use the wg93 data set that is available in the #package ca των Nenadic, O., & Greenacre, M. (2007). Correspondence #analysis in R, with two-and three-dimensional graphics: the ca package. #Journal of statistical software, 20, 1-13.
+
 library(ca)
 library(interCa)
 data<-ca::wg93
