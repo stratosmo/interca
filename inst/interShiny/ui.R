@@ -21,8 +21,7 @@ shinyUI(
                                 ".shiny-output-error { visibility: hidden; }",
                                 ".shiny-output-error:before { visibility: hidden; }"
         ),
-        checkboxInput("help","Show help",value=FALSE),
-        textOutput("help"),
+
           tags$h3("Load data"),
           tags$hr(),
           fileInput("file1", "Choose CSV or XLSX File",

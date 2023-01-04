@@ -1,4 +1,4 @@
-#source('libraries.R')
+
 library(writexl)
 library(shiny)
 library(waiter)
@@ -380,12 +380,7 @@ shinyServer(function(input, output,session) {
     }
   )
 
-  output$help<-renderText({
-    if(input$help==TRUE){
-      "Show help here!"
-    }
 
-  })
 
   observeEvent(input$run, {
     withProgressWaitress({

@@ -10,12 +10,7 @@ params:
 
 InterCA dynamic report
 
-Please find below an automatic report that has been produced according to your selections. Please notice that this report has been developed to facilitate faster interpretation of interpretive axes and interpretive planes as suggested at : ["Automatic" interpretation of multiple correspondence analysis (MCA) results for nonexpert users, using R programming \| Emerald Insight](https://www.emerald.com/insight/content/doi/10.1108/ACI-07-2022-0191/full/html)
-
-Cite:
-
-Moschidis, S., Markos, A., & Thanopoulos, A. C. (2022). "Automatic" interpretation of multiple correspondence analysis (MCA) results for nonexpert users, using R programming. Applied Computing and Informatics, ahead-of-print(ahead-of-print). <https://doi.org/10.1108/ACI-07-2022-0191>
-
+Please find below an automatic report that has been produced according to your selections. 
 According to your selections the following table is produced
 
 ```{r echo=FALSE}
