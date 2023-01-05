@@ -27,7 +27,7 @@ colnames(df)=c("Interpretive coordinates")
 df
 ```
 
-Acoording to your selection the most contributing (important) points of your axis is
+Acoording to your selection the most contributing (important) points of your axis are:
 ```{r echo=FALSE}
 library(tidyverse)
 params$axis_table->df
