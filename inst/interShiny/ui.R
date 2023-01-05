@@ -66,7 +66,7 @@ shinyUI(
                      fluidRow(
 
                        column(6,useShinyFeedback(),
-                              numericInput("which.axis","Select which axis to render",value=1),
+                              numericInput("which.axis","Select which axis to render",value=NA),
                               textOutput("validation"),
                               checkboxInput("cb_slider_axis","Manual filtering",value = T),
                               sliderInput("slider_axis","Filter points",value = 50,min=0,max=100),
@@ -83,8 +83,8 @@ shinyUI(
                      ),
             tabPanel("Interpretive plane",
                      fluidRow(
-                       column(6,  numericInput("which.xaxis","Select which axis will be the x-axis",value=1),
-                              numericInput("which.yaxis","Select which axis will be the y-axis",value=2),
+                       column(6,  numericInput("which.xaxis","Select which axis will be the x-axis",value=NA),
+                              numericInput("which.yaxis","Select which axis will be the y-axis",value=NA),
                               checkboxInput("cb_slider_plane","Manual filtering",value = T),
                               sliderInput("slider_plane","Filter points",value = 50,min=0,max=100),
                               actionButton("do_plane","Create plane and table",class="btn-success"),
