@@ -1,22 +1,15 @@
 plot2d <- function(res, dim1=1, dim2=2) {
-
-
   e1 <- as.vector(res$ecoords[,dim1])
   e2 <- as.vector(res$ecoords[,dim2])
-
   avge1 <- mean(abs(e1))
   avge2 <- mean(abs(e2))
   avepl1 <- mean(abs(e1)+abs(e2))
   lbl <- res$lbl
-
-
   auto_mca_table <- data.frame(cbind(e1,e2,lbl))
   auto_mca_table$e1 <- as.numeric(auto_mca_table$e1)
   auto_mca_table$e2 <- as.numeric(auto_mca_table$e2)
   auto_mca_table$lbl <- as.factor(auto_mca_table$lbl)
   auto_mca_table <- auto_mca_table %>%filter(abs(e1)+abs(e2)>avepl1)
-
-
   averageccc = avepl1
   avexx=c(averageccc,0,-averageccc,0,averageccc)
   aveyy=c(0,-averageccc,0,averageccc,0)

@@ -1,24 +1,16 @@
 plot2dslider <- function(first,second,ave) {
-
-
   e1 <- first
   e2 <- second
-
   avge1 <- mean(abs(e1))
   avge2 <- mean(abs(e2))
   avepl1 <- ave
   lbl <- names(first)
-
   c=abs(e1)+abs(e2)
   auto_mca_table <- data.frame(cbind(e1,e2,lbl,c))
   auto_mca_table$e1 <- as.numeric(auto_mca_table$e1)
   auto_mca_table$e2 <- as.numeric(auto_mca_table$e2)
   auto_mca_table$lbl <- as.factor(auto_mca_table$lbl)
   auto_mca_table$c <- as.numeric(auto_mca_table$c)
-
-
-
-
   averageccc = avepl1
   avexx=c(averageccc,0,-averageccc,0,averageccc)
   aveyy=c(0,-averageccc,0,averageccc,0)

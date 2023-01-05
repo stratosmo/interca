@@ -1,11 +1,11 @@
-
+library(FactoMineR)
+library(factoextra)
 library(shiny)
 library(waiter)
 library(shinyFeedback)
 library(shinyWidgets)
 library(readr)
 library(readxl)
-# Define UI for application that draws a histogram
 shinyUI(
   navbarPage("'Automatic' MCA interpretation",
              tabPanel("InterShiny",
@@ -36,12 +36,12 @@ shinyUI(
 
           numericInput("num_axes","Select number of axes",value=5),
         useWaitress(),
-                  actionButton("run","Run interca",class="btn-primary")
+                  actionButton("run","Select number of axes",class="btn-primary")
 
 
         ),
 
-        # Show a plot of the generated distribution
+        
         mainPanel(
           tabsetPanel(
 
@@ -66,7 +66,7 @@ shinyUI(
                      fluidRow(
 
                        column(6,useShinyFeedback(),
-                              numericInput("which.axis","Select which axis to render",value=NA),
+                              numericInput("which.axis","Select which axis to render",value=1),
                               textOutput("validation"),
                               checkboxInput("cb_slider_axis","Manual filtering",value = T),
                               sliderInput("slider_axis","Filter points",value = 50,min=0,max=100),

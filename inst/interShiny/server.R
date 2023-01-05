@@ -1,16 +1,13 @@
-
+library(FactoMineR)
+library(factoextra)
 library(writexl)
 library(shiny)
 library(waiter)
 library(readr)
 library(readxl)
 
-# Define server logic required to draw a histogram
 shinyServer(function(input, output,session) {
-
-
-
-
+  
   data <- reactive({
     infile <- input$file1
 
@@ -357,22 +354,12 @@ shinyServer(function(input, output,session) {
   )
 
   output$report_plane <- downloadHandler(
-    # For PDF output, change this to "report.pdf"
+    
     filename = "report_plane.html",
     content = function(file) {
-      #e=new.env()
-      # Copy the report file to a temporary directory before processing it, in
-      # case we don't have write permissions to the current working dir (which
-      # can happen when deployed).
       tempReport <- file.path(tempdir(), "report_plane.Rmd")
       file.copy("report_plane.Rmd", tempReport, overwrite = TRUE)
-
-      # Set up parameters to pass to Rmd document
       params <- list(plane=plane(),plane_table=plane_table())
-
-      # Knit the document, passing in the `params` list, and eval it in a
-      # child of the global environment (this isolates the code in the document
-      # from the code in this app).
       rmarkdown::render(tempReport, output_file = file,
                         params = params,
                         envir = new.env(parent = globalenv())

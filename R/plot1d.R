@@ -1,25 +1,15 @@
 plot1d <- function(res, dim=1) {
-  #first factorial axis with first condition
   e1 <- as.vector(res$ecoords[,dim])
   n <- length(e1)
-  #  if (is.null(threshold))
   avge <- mean(abs(e1))
-  #  else
-  #    avge <- threshold
   lbl <- res$lbl[abs(e1)> avge]
   e1 <- round(e1[abs(e1)> avge],2)
-
-  #first interpretive axis
   ye1 <- rep(0,length(e1))
-
   auto_mca_tablee1 <- data.frame(cbind(e1,ye1,lbl))
-
   auto_mca_tablee1$e1 <- as.numeric(auto_mca_tablee1$e1)
   auto_mca_tablee1$ye1 <- as.numeric(auto_mca_tablee1$ye1)
   auto_mca_tablee1$lbl <- as.factor(auto_mca_tablee1$lbl)
   auto_mca_tablee1 <- auto_mca_tablee1 %>%filter(abs(e1)>avge)
-
-
   interpretive1 <- auto_mca_tablee1%>%
     ggplot() +
     aes(x = e1, y = ye1) +

@@ -1,12 +1,8 @@
 plot1d <- function(res, dim=1) {
-  #first factorial axis with first condition
-  e1 <- as.vector(res$ecoords[,dim])
+    e1 <- as.vector(res$ecoords[,dim])
   n <- length(e1)
-  #  if (is.null(threshold))
-  avge <- mean(abs(e1))
-  #  else
-  #    avge <- threshold
-  lbl <- res$lbl[abs(e1)> avge]
+    avge <- mean(abs(e1))
+   lbl <- res$lbl[abs(e1)> avge]
   e1 <- round(e1[abs(e1)> avge],2)
 
   #first interpretive axis
