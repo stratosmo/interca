@@ -11,7 +11,7 @@ params:
 InterCA dynamic report
 
 Please find below an automatic report that has been produced according to your selections. 
-According to your selections the following table is produced
+According to your selections the following axis is produced
 
 ```{r echo=FALSE}
 library(pander)
