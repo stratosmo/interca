@@ -304,7 +304,7 @@ shinyServer(function(input, output,session) {
 
   observeEvent(input$do_axis, {
 
-    req(input$which.axis>input$num_axes)
+    req(input$which.axis>=input$num_axes | input$which.axis<=0)
     sendSweetAlert(
       session = session,
       title = "Error...",
@@ -317,7 +317,7 @@ shinyServer(function(input, output,session) {
 
   observeEvent(input$do_plane, {
 
-    req(input$which.xaxis>input$num_axes | input$which.yaxis>input$num_axes)
+    req(input$which.xaxis>input$num_axes | input$which.yaxis>input$num_axes | input$which.xaxis<=0 | input$which.yaxis<=0)
     sendSweetAlert(
       session = session,
       title = "Error...",
